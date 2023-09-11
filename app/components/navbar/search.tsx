@@ -62,6 +62,14 @@ const Search = () => {
             cursor-pointer
             "
         >
+            <div 
+        className="
+          flex 
+          flex-row 
+          items-center 
+          justify-between
+        "
+      >
             <div
                 className="
                     text-sm
@@ -101,6 +109,7 @@ const Search = () => {
                 <div className="hidden sm:block">{guestLabel}</div>
                 <div className="p-2 bg-rose-500 rounded-full text-white"><BiSearch size={18} /></div>
 
+            </div>
             </div>
 
         </div>
