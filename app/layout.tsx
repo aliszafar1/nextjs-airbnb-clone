@@ -2,6 +2,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import Navbar from './components/navbar/navbar'
+import LoginModal from './components/modals/loginModal'
+import ClientOnly from './components/clientOnly'
+import RegisterModal from './components/modals/registerModal'
 
 
 export const metadata: Metadata = {
@@ -20,8 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+        <ClientOnly>
         <Navbar />
-        {children}</body>
+        <RegisterModal />
+        <LoginModal />
+        </ClientOnly>
+        {children}
+        </body>
     </html>
   )
 }
